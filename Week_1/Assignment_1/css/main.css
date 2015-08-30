@@ -96,12 +96,14 @@ textarea {
    ========================================================================== */
 body {
 	max-width: 648px;
+    height: 394px;
 	position: fixed;
+	color: #FFF;
 }
+
 header {
 	font-family: "Times New Roman", serif; 
 	background-color: #c93042;
-	color: #FFF;
 	text-align: center;
 	padding: 10px;
 }
@@ -124,26 +126,31 @@ figure {
 }
 
 figcaption {
+	width: 235px;
+	height: 165px;
 	position: absolute;
 	bottom: 75px;
-	left: 380px;
-	right: 40px;
+	left: 365px;
 	top: 26px;
 	font-family: Arial;
 	color: white;
-	background-color: #f6485f;
 	padding: 0px 15px;
 }
 
 figcaption p:first-child {
 	font-size: 1.2em;
+	padding-top: 20px;
+
 }
 
-figcaption p {
-	font-size: .8em;
+figure p {
+	font-size: .85em;
+	margin: 0px;
+	padding: 3px;
 }
 
-figcaption article {
+#link {
+	margin: 15px 15px 0px 0px;;
 	text-align: center;
 	font-family: "Times New Roman", serif; 
 	font-size: 1.2em;
@@ -151,11 +158,10 @@ figcaption article {
 
 }
 
-figcaption article a {
+#link a {
 	color: #552413;
 	text-decoration: none;
 }
-
 
 
 

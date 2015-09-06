@@ -94,18 +94,31 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-main section figure {
-	width: 200px;
-	text-align: center;
-	border: 5px solid black;
-	float: left;
-	clear: both;
+h1, h2, h3, header {
+	margin: 0px;
+	text-transform: uppercase;
 }
 
-h2 {
-	background-color: black;
-	color: white;
-	margin: 0px;
+header, h3 {
+	background-color: #000;
+	color: #D3D3D3;
+}
+
+header, figure {
+	text-align: center;
+}
+
+header {
+	padding: 25px;
+}
+
+
+figure {
+	width: 200px;
+	border: 5px solid #000;
+}
+
+h3 {
 	padding-top: 5px;
 }
 
@@ -113,6 +126,19 @@ img {
 	padding: 15px;
 }
 
+
+main {
+	padding-top: 75px;
+	max-width: 85%;
+	margin: auto;
+	
+}
+main section {
+	box-sizing: border-box;
+	float: left;
+	padding: 20px;
+	height: 250px;
+}
 
 
 

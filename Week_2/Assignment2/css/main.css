@@ -94,14 +94,26 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+
+
 h1, h2, h3, header {
 	margin: 0px;
 	text-transform: uppercase;
 }
 
+h1 {
+	font-family: comfortaa;
+	font-size: 2.3em;
+	color: #F0F0F0;
+}
+
+h2, h3 {
+	font-family: roboto;
+	color: #D3D3D3;
+}
+
 header, h3 {
 	background-color: #000;
-	color: #D3D3D3;
 }
 
 header, figure {
@@ -114,7 +126,7 @@ header {
 
 
 figure {
-	width: 200px;
+	width: 215px;
 	border: 5px solid #000;
 }
 
@@ -123,29 +135,21 @@ h3 {
 }
 
 img {
-	padding: 15px;
+	padding: 20px;
 }
 
 
 main {
 	padding-top: 75px;
-	max-width: 85%;
-	margin: auto;
+	max-width: 90%;
+	margin: 0 auto;
 	
 }
 main section {
 	box-sizing: border-box;
 	float: left;
-	padding: 20px;
-	height: 250px;
+	height: 300px;
 }
-
-
-
-
-
-
-
 
 
 

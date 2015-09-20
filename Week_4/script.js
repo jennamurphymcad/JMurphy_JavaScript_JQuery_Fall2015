@@ -1,19 +1,19 @@
 var churchill = {
-  author : 'Winston Churchill',
-  year : 1940,
-  bceOrNot : 'false'
+  author   : 'Winston Churchill',
+  year     :  1940,
+  bceOrNot :  false
 };
 
 var ghandi = {
-  author : 'Ghandi',
-  year : 1942,
-  bceOrNot : 'false'
+  author   : 'Ghandi',
+  year     :  1942,
+  bceOrNot :  false
 };
 
 var demosthenes = {
-  author : 'Demosthenes',
-  year : 342,
-  bceOrNot : 'true'
+  author   : 'Demosthenes',
+  year     :  342,
+  bceOrNot :  true
 };
 
 var myArray = ['churchill', 'ghandi', 'demosthenes'];

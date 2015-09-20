@@ -1,18 +1,18 @@
 var churchill = {
   author : 'Winston Churchill',
-  year : '1940',
+  year : 1940,
   bceOrNot : 'false'
 };
 
 var ghandi = {
   author : 'Ghandi',
-  year : '1942',
+  year : 1942,
   bceOrNot : 'false'
 };
 
 var demosthenes = {
   author : 'Demosthenes',
-  year : '342',
+  year : 342,
   bceOrNot : 'true'
 };
 

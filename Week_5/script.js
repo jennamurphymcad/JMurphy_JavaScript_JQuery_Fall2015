@@ -97,10 +97,10 @@ document.getElementById('BtnDemosthenes').addEventListener('click', function(){
 
 });
 
-//Prompt on Window Load
+//Prompt on Window Load (placing at bottom of script as onload events were placed at bottom in the Week 4 Feedback video, is this the correct spot? Further, why would these be placed at the bottom?)
 //**Note** Assignment asks for variable to be called "User", isn't this incorrect syntax for first letter of var to be capitalized?
 User = window.prompt('What is your name?');
-  if (typeof User === 'string' && ) User.length !== 0 { //should second condition be User.hasOwnProperty('length') !== "" -- doesnt work properly? "hasOwnLength" leveraged from Lecture 5.2.4
+  if (typeof User === 'string' && User.length !== 0) { //should second condition be User.hasOwnProperty('length') !== "" -- doesnt work properly? "hasOwnLength" leveraged from Lecture 5.2.4
     console.log('Hi ' + User + '!');
   } else {
     console.log("Ok, I\'ll just call you User.");

@@ -24,41 +24,38 @@ document.getElementById('BtnDonate').addEventListener('click', function(){
   //Code in here executes when the user clicks the "Donate" button.
   var favAuthor = window.prompt("Who is your favorite author?");
   var result;
-
   switch (favAuthor) {
-
     case speechesArray[0].author:
       console.log(speechesArray[0].author + ' was ' + speechesArray[0].authorAge + ' during this speech.');
       break;
-
     case speechesArray[1].author:
       console.log(speechesArray[1].author + ' was ' + speechesArray[1].authorAge + ' during this speech.');
       break;
-
     case speechesArray[2].author:
       console.log(speechesArray[2].author + ' was ' + speechesArray[2].authorAge + ' during this speech.');
       break;
-
     default:
       console.log("Sorry, something is not quite right with your response. Please check your spelling and try again.");
       break; //break needed after default?
   }
-
 });
 
 document.getElementById('BtnChurchill').addEventListener('click', function(){
   //Code in here executes when the user clicks the "Churchill" button.
+  console.log("This speech was written by " + speechesArray[0].author + " in " + speechesArray[0].year + '.');
 });
 
 document.getElementById('BtnGhandi').addEventListener('click', function(){
   //Code in here executes when the user clicks the "Ghandi" button.
+  console.log("This speech was written by " + speechesArray[1].author + " in " + speechesArray[1].year + '.');
 });
 
 document.getElementById('BtnDemosthenes').addEventListener('click', function(){
   //Code in here executes when the user clicks the "Demosthenes" button.
+  console.log("This speech was written by " + speechesArray[2].author + " in " + speechesArray[2].year + '.');
 });
 
-
+//not working quite right-- accepting numbers along with strings. Why?
 var User = window.prompt('What is your name?'); // note** Assignment asks for variable to be "User", isn't this incorrect syntax to have a capital?
 if (typeof User === 'string' && User.hasOwnProperty('length') !== "") {
     console.log('Hi ' + User + '!');

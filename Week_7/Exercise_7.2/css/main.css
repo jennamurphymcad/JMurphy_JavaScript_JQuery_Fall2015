@@ -1,0 +1,22 @@
+
+/* ==========================================================================
+   Author's custom styles - Exercise 7.2 by Jenna Murphy, CSS3 Transition code from http://www.w3schools.com/css/css3_transitions.asp
+   //**note** lots of issues when applying css styles to the ID and Class. Settled for just calling out the div
+   so that similar properties would change. 
+   ========================================================================== */
+div {
+  border: solid 5px #00a272;
+  background-color: #87bedd;
+  height: 100px;
+  width: 100px;
+  background-color:
+}
+
+.divcssclass {
+  border: solid 20px #87bedd;
+  background-color: #00a272;
+  height: 300px;
+  width: 200px;
+  -webkit-transition: width 5s, height 4s; /* Safari */
+  transition: width 2s, height 4s;
+}

@@ -3,10 +3,11 @@
 $(function() {
   //places image before text in li element
   $("#menu ul li a").prepend("<img src='icon.png' alt='icon'>");
+
   //clicking h1 element calls headerChange function
   $("#header h1").on("click", headerChange);
 
-  //Is there a better way? Come Back To!
+  //changes color of first li text
   $("#sidebar_content_1 ul li a:first").css("color", "red");
 
   //adds class to change position of all even li elements
@@ -23,15 +24,15 @@ $(function() {
 });
 
 function headerChange() {
-    $( "#header").toggleClass("changeBackground");
+  $( "#header").toggleClass("changeBackground");
 };
 
 function toggleFunction1() {
-    $("#sidebar_content_1 li").toggle();
+  $("#sidebar_content_1 li").toggle();
 };
 
 function toggleFunction2() {
-    $("#sidebar_content_2 li").toggle();
+  $("#sidebar_content_2 li").toggle();
 };
 
 function contentChange() {

@@ -18,10 +18,10 @@ $(function() {
   $('li').click(function() {
     var selectedArticle = $("#" + this.id + "Content");
         if ($(selectedArticle).is(":visible")) {
-          $(selectedArticle).hide();
+          $(selectedArticle).fadeOut({duration: 800});
         } else {
           $("#mainContent article").hide();
-          $(selectedArticle).fadeIn({duration: 2000});
+          $(selectedArticle).fadeIn({duration: 1500});
           $(selectedArticle).animate({"padding-top": "0px"}, {queue: false, duration: "slow"});
         }
     });

@@ -100,7 +100,8 @@ html {
      box-sizing: border-box;
      max-width: 85%;
      background-color: #ebe6d2;
-     color: #2f2f2f;
+     color: #2f2f2f;]
+     position: relative;
    }
 
 *, *:before, *:after {
@@ -113,8 +114,10 @@ aside {
   background-color: #F2f2f2;
    float: left;
    max-width: 35%;
+   width: 300px;
    margin-left: 25px;
    box-shadow: -1px 9px 20px #888888;
+   position:fixed;
 }
 
 aside h2 {
@@ -127,12 +130,27 @@ aside h2 {
 }
 
 header nav li {
-    padding: 5px 0px;
+    /*padding: 5px 0px;*/
     list-style-type: none;
 }
 
-header nav .recipe li {
-  margin-left: -20px;
+#category1ul, #category2ul, #category3ul {
+  margin-left: -20;
+  padding: 0px;
+
+}
+
+header nav a {
+  color: #2f2f2f;
+  padding: 5px;
+}
+
+header nav a:active {
+  background-color: #28767a;
+}
+
+header nav a:visited {
+  color: #2f2f2f;
 }
 
 header nav a:hover {
@@ -143,14 +161,16 @@ header nav a:hover {
      background-color: #F2f2f2;
      float: right;
      max-width: 64%;
-     padding-left: 10px;
-     padding-right: 50px;
+     width: 800px;
+     padding: 10px;
      margin-bottom: 100px;
      box-shadow: 0px 10px 20px #888888;
 }
 
 #mainNav {
      color: #FFF;
+     width: auto;
+     height: auto;
 }
 
 header h1 {
@@ -160,16 +180,24 @@ header h1 {
      font-size: 2.2em;
 }
 
-.complete{
-    display:none;
+.hidden {
+  display: none;
 }
 
-.more{
-    background:lightblue;
-    color:navy;
-    font-size:13px;
-    padding:3px;
+.show {
+  display:block;
+}
+
+.button {
+    display: none;
+    background:#87c3c3;
+    color: #f2f2f2;
+    font-size: 1.8em;
+    padding:5px;
+    text-align: center;
     cursor:pointer;
+    margin-bottom: 0px;
+
 }
 /*
 #mainNav ul {
@@ -186,6 +214,12 @@ header h1 {
   margin-left: -38px;
 }
 
+article h4 {
+  color: #28767a;
+  font-size: 2em;
+  margin-top: 0px;
+  padding-top: 10px;
+}
 
 
 

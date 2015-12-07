@@ -269,14 +269,34 @@ article a:hover {
   -ms-transition: all 0.4s linear;
   transition: all 0.4s linear; }
 
-header img {
+html, body {
+  padding: 0;
+  margin: 0; }
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+nav img {
   max-width: 30px;
   max-height: 30px;
-  opacity: 0.1; }
+  opacity: 0.7; }
+
+#arrow {
+  opacity: 0.3;
+  padding-top: 150px;
+  max-width: 6%;
+  max-height: 6%; }
 
 nav {
-  float: right; }
+  padding-top: 50px;
+  padding-bottom: 35px; }
+  nav h1 {
+    float: right; }
   nav ul {
+    float: right;
     margin: 30px; }
     nav ul li {
       float: right;
@@ -290,16 +310,54 @@ body {
   background-color: #FFFFFF; }
   body p {
     margin-left: 30px; }
-  body canvas {
-    margin-left: 30px; }
+
+#mainContent {
+  position: aboslute;
+  height: 100%;
+  width: 100%;
+  margin-top: 100%;
+  background-color: #FFFFFF; }
+
+#myContainer {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -10; }
+
+header nav {
+  z-index: 9999; }
 
 h3 {
   padding-top: 35px;
   padding-bottom: 15px;
   border-bottom: 1px solid #cfcfcf; }
 
+canvas {
+  z-index: -20;
+  position: fixed;
+  top: 0;
+  left: 0; }
+
 .title, header h2 {
   margin: 0px; }
+
+figure {
+  position: relative; }
+
+figure img {
+  display: block; }
+
+figcaption {
+  background: rgba(255, 255, 255, 0.5);
+  color: #363636;
+  font-size: 1.6rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0; }
+  figcaption h4 {
+    font-family: "Comfortaa", cursive; }
 
 .title {
   float: left;
@@ -307,20 +365,20 @@ h3 {
   padding-left: 30px;
   padding-bottom: 15px; }
 
-header h2 {
-  padding-top: 175px;
-  padding-bottom: 45px;
-  clear: both; }
-
-header p {
+#myContainer h2 {
   padding-bottom: 45px; }
 
-canvas {
+#myContainer p {
+  padding-bottom: 45px; }
+
+#myContainer h2, #myContainer p, section article {
   max-width: 70%;
   margin: 0px auto; }
 
-header h2, header p, section article {
-  max-width: 70%;
-  margin: 0px auto; }
+.hidden {
+  display: none; }
+
+.show {
+  display: block; }
 
 /*# sourceMappingURL=style.css.map */

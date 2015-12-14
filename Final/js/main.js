@@ -1,22 +1,19 @@
 $(function() {
-  //make wholePage full size of window -- assistance from Anthony
-    $('#wholePage').height(function() {
+    //make wholePage full size of window -- assistance from Anthony
+    $('html').height(function() {
             return $(window).height();
     });
-//and when window resizes (such as roatating phone screen) make wholePage whole page -- assistance from Anthony
+    //and when window resizes (such as roatating phone screen) make wholePage whole page -- assistance from Anthony
     $(window).resize(function(){
-        $('#wholePage').height(function(){
+        $('html').height(function(){
             return $(window).height();
         });
     });
 
-
   //if JS available, hide figcaption p
   $("figcaption p").addClass("hidden");
 
-  //if JS available, hide mainContent  $("#mainContent").addClass("hidden");
-
-  //click on h4 will reveal project description
+  //mouseenter figure will reveal project description
   $("figure").each(function() {
     $(this).mouseenter(function() {
         $("#" + this.id + "Par").removeClass("hidden").addClass("show");
@@ -26,48 +23,30 @@ $(function() {
     })
   });
 
-  //clicking on landing page will allow mainContent to slideup
+  //clicking on arrow on landing page will allow mainContent to slideup
   $("#myContainer").click(function() {
     mainContentSlideUp();
+    $("#myContainer canvas").remove();
+    $("#navStick").addClass("sticky")
   });
 
-  // var canvas = $('canvas');
-  //
-  //     // Obtain a graphics context on the
-  //     // canvas element for drawing.
-  //     context = canvas.getContext('2d');
-  //
-  // // Start listening to resize events and
-  // // draw canvas.
-  // initialize();
-  //
-  // function initialize() {
-  //   // Register an event listener to
-  //   // call the resizeCanvas() function each time
-  //   // the window is resized.
-  //   window.addEventListener('resize', resizeCanvas, false);
-  //
-  //   // Draw canvas border for the first time.
-  //   resizeCanvas();
-  // }
-  //
-  // // Display custom canvas.
-  // // In this case it's a blue, 5 pixel border that
-  // // resizes along with the browser window.
-  // function redraw() {
-  //   context.strokeStyle = 'blue';
-  //   context.lineWidth = '5';
-  //   context.strokeRect(0, 0, window.innerWidth, window.innerHeight);
-  // }
-  //
-  // // Runs each time the DOM window resize event fires.
-  // // Resets the canvas dimensions to match window,
-  // // then draws the new borders accordingly.
-  // function resizeCanvas() {
-  //   canvas.width = window.innerWidth;
-  //   canvas.height = window.innerHeight;
-  //   redraw();
-  // }
+  //leveraged from own code week 13: when clicked on recipe in nav, will only show the selected recipe and hide others
+  $('#navStick ul li').click(function() {
+    var selectedArticle = $("#" + this.id + "Article");
+    //  $(selectedArticle).animate({"padding-top": "0px"}, {queue: false, duration: "slow"});
+        if ($(selectedArticle).is(":visible")) {
+          if ($("article").is(":visible")) {
+            $("article").hide();
+            $(selectedArticle).fadeIn();
+            $("article").removeClass("hidden");
+          } else {
+            $(selectedArticle).fadeOut();
+          }
+      } else {
+        $("article").hide();
+        $(selectedArticle).fadeIn();
+      }
+  });
 
 });
 

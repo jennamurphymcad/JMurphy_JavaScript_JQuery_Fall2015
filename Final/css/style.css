@@ -208,24 +208,25 @@ h3 {
 #myContainer h1 {
   font-family: "Comfortaa", cursive;
   color: #363636;
-  font-size: 3em;
-  text-transform: uppercase; }
+  font-size: 3em; }
 
 header h2, .inner h2, #myContainer h2 {
   font-size: 1.8em;
   font-family: "Comfortaa", cursive;
   color: #363636; }
 
-header nav ul li a {
-  font-size: .8em;
-  text-transform: uppercase;
-  padding-right: 10px;
-  color: #363636;
-  text-decoration: none; }
-
-header p {
+header {
   font-size: 1.5em;
   color: #363636; }
+  header nav h1 {
+    color: #FFF; }
+  header nav ul li a {
+    font-size: .5em;
+    text-transform: uppercase;
+    padding-right: 10px;
+    color: #fcd2be;
+    text-decoration: none;
+    font-family: "Comfortaa", cursive; }
   header p a {
     color: #363636;
     text-decoration: none;
@@ -244,7 +245,7 @@ header p {
   font-family: "Comfortaa", cursive;
   font-size: 1.6rem; }
   .title a {
-    color: #363636;
+    color: #fff;
     text-decoration: none;
     padding: 3px; }
   .title a:hover {
@@ -284,7 +285,7 @@ html, body {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: -10; }
+  z-index: -1; }
 
 footer img {
   float: left;
@@ -304,12 +305,12 @@ footer {
 #myContainer #arrow {
   opacity: 0.3;
   padding-top: 150px;
-  max-width: 6%;
-  max-height: 6%; }
+  max-width: 15%;
+  max-height: 15%; }
 
 nav {
-  padding-top: 50px;
-  padding-bottom: 35px; }
+  padding: 20px;
+  margin-bottom: 100px; }
   nav h1 {
     float: left; }
   nav ul {
@@ -335,11 +336,8 @@ body {
   margin-top: 100%;
   background-color: #FFF; }
 
-#myContainer nav {
-  z-index: 9999; }
-
 h3 {
-  padding-top: 35px;
+  padding-top: 160px;
   text-transform: uppercase;
   font-size: 3.4em;
   opacity: 0.06;
@@ -358,9 +356,8 @@ canvas {
 
 figure {
   position: relative; }
-
-figure img {
-  display: block; }
+  figure img {
+    display: block; }
 
 .title {
   float: left;
@@ -369,11 +366,12 @@ figure img {
   padding-bottom: 15px; }
 
 header h2 {
-  padding-top: 100px;
+  text-align: center;
+  padding-top: 400px;
   padding-bottom: 45px; }
 
 header p {
-  padding-bottom: 45px; }
+  padding-bottom: 100px; }
 
 header h2, header p, section article {
   max-width: 70%;
@@ -385,8 +383,22 @@ header h2, header p, section article {
 .show {
   display: block; }
 
-.colorbg {
-  background-color: #fff; }
+nav {
+  z-index: 9999; }
+
+.sticky {
+  background-color: #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  -webkit-transition: all 0.6s linear;
+  -moz-transition: all 0.6s linear;
+  -o-transition: all 0.6s linear;
+  -ms-transition: all 0.6s linear;
+  transition: all 0.6s linear; }
+  .sticky .title {
+    color: #fff; }
 
 article figure {
   margin-bottom: 110px;
@@ -400,7 +412,7 @@ article, footer {
   float: right; }
   .right figcaption {
     position: absolute;
-    z-index: 9999999px;
+    z-index: 999px;
     left: -230px;
     top: 25px; }
     .right figcaption h4 {
@@ -416,9 +428,11 @@ article, footer {
 
 .left {
   float: left; }
+  .left img {
+    margin-right: 0; }
   .left figcaption {
     position: absolute;
-    z-index: 9999999px;
+    z-index: 999px;
     right: -250px;
     top: 25px; }
     .left figcaption h4 {
@@ -439,5 +453,8 @@ figcaption {
   font-size: 1.6rem; }
   figcaption h4 {
     font-family: "Comfortaa", cursive; }
+
+.active {
+  color: #FFF; }
 
 /*# sourceMappingURL=style.css.map */

@@ -205,16 +205,28 @@ h3 {
   font-size: 1.8em;
   color: #363636; }
 
-header h2, .inner h2 {
+#myContainer h1 {
+  font-family: "Comfortaa", cursive;
+  color: #363636;
   font-size: 3em;
+  text-transform: uppercase; }
+
+header h2, .inner h2, #myContainer h2 {
+  font-size: 1.8em;
   font-family: "Comfortaa", cursive;
   color: #363636; }
+
+header nav ul li a {
+  font-size: .8em;
+  text-transform: uppercase;
+  padding-right: 10px;
+  color: #363636;
+  text-decoration: none; }
 
 header p {
   font-size: 1.5em;
   color: #363636; }
   header p a {
-    background-color: #fcd2be;
     color: #363636;
     text-decoration: none;
     padding: 3px; }
@@ -252,39 +264,44 @@ article ul {
     margin-left: 50px;
     font-size: 1.5em; }
     article ul li li {
-      font-size: 90%;
+      font-size: 80%;
       padding: 3px; }
 article a {
   color: #363636;
-  background-color: #fcd2be;
   text-decoration: none;
   padding: 3px; }
-article a:hover {
-  background-color: #fcbec9;
-  text-decoration: underline;
-  text-decoration: underline;
-  -webkit-transition: all 0.4s linear;
-  -moz-transition: all 0.4s linear;
-  -o-transition: all 0.4s linear;
-  -ms-transition: all 0.4s linear;
-  transition: all 0.4s linear; }
 
 html, body {
   padding: 0;
   margin: 0; }
 
-header {
+#myContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -10; }
 
-nav img {
-  max-width: 30px;
-  max-height: 30px;
+footer img {
+  float: left;
+  max-width: 35px;
+  max-height: 35px;
   opacity: 0.7; }
 
-#arrow {
+footer {
+  padding: 200px;
+  margin-bottom: -200px;
+  background-color: #FFF; }
+  footer ul li {
+    float: left;
+    list-style-type: none;
+    padding: 30px; }
+
+#myContainer #arrow {
   opacity: 0.3;
   padding-top: 150px;
   max-width: 6%;
@@ -294,12 +311,12 @@ nav {
   padding-top: 50px;
   padding-bottom: 35px; }
   nav h1 {
-    float: right; }
+    float: left; }
   nav ul {
     float: right;
     margin: 30px; }
     nav ul li {
-      float: right;
+      float: left;
       padding: 5px; }
 
 body {
@@ -316,22 +333,19 @@ body {
   height: 100%;
   width: 100%;
   margin-top: 100%;
-  background-color: #FFFFFF; }
+  background-color: #FFF; }
 
-#myContainer {
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -10; }
-
-header nav {
+#myContainer nav {
   z-index: 9999; }
 
 h3 {
   padding-top: 35px;
-  padding-bottom: 15px;
-  border-bottom: 1px solid #cfcfcf; }
+  text-transform: uppercase;
+  font-size: 3.4em;
+  opacity: 0.06;
+  line-height: .85em;
+  letter-spacing: 5px;
+  text-align: center; }
 
 canvas {
   z-index: -20;
@@ -340,7 +354,7 @@ canvas {
   left: 0; }
 
 .title, header h2 {
-  margin: 0px; }
+  margin: 0 auto; }
 
 figure {
   position: relative; }
@@ -348,30 +362,20 @@ figure {
 figure img {
   display: block; }
 
-figcaption {
-  background: rgba(255, 255, 255, 0.5);
-  color: #363636;
-  font-size: 1.6rem;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0; }
-  figcaption h4 {
-    font-family: "Comfortaa", cursive; }
-
 .title {
   float: left;
   padding-top: 30px;
   padding-left: 30px;
   padding-bottom: 15px; }
 
-#myContainer h2 {
+header h2 {
+  padding-top: 100px;
   padding-bottom: 45px; }
 
-#myContainer p {
+header p {
   padding-bottom: 45px; }
 
-#myContainer h2, #myContainer p, section article {
+header h2, header p, section article {
   max-width: 70%;
   margin: 0px auto; }
 
@@ -380,5 +384,60 @@ figcaption {
 
 .show {
   display: block; }
+
+.colorbg {
+  background-color: #fff; }
+
+article figure {
+  margin-bottom: 110px;
+  clear: both;
+  box-shadow: 0px 10px 6px -6px #999; }
+
+article, footer {
+  clear: both; }
+
+.right {
+  float: right; }
+  .right figcaption {
+    position: absolute;
+    z-index: 9999999px;
+    left: -230px;
+    top: 25px; }
+    .right figcaption h4 {
+      font-size: 2em;
+      color: #fcbec9;
+      max-width: 50%;
+      line-height: .85em; }
+    .right figcaption p {
+      background-color: rgba(255, 255, 255, 0.95);
+      margin-top: -30px;
+      padding: 30px;
+      box-shadow: 0px 10px 6px -6px #888; }
+
+.left {
+  float: left; }
+  .left figcaption {
+    position: absolute;
+    z-index: 9999999px;
+    right: -250px;
+    top: 25px; }
+    .left figcaption h4 {
+      float: right;
+      font-size: 2em;
+      color: #fcd2be;
+      max-width: 45%;
+      line-height: .85em; }
+    .left figcaption p {
+      clear: both;
+      background-color: rgba(255, 255, 255, 0.95);
+      margin-top: -30px;
+      padding: 30px;
+      box-shadow: 0px 10px 6px -6px #888; }
+
+figcaption {
+  color: #363636;
+  font-size: 1.6rem; }
+  figcaption h4 {
+    font-family: "Comfortaa", cursive; }
 
 /*# sourceMappingURL=style.css.map */

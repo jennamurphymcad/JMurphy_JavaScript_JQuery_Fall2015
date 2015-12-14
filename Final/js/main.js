@@ -1,4 +1,15 @@
 $(function() {
+  //make wholePage full size of window -- assistance from Anthony
+    $('#wholePage').height(function() {
+            return $(window).height();
+    });
+//and when window resizes (such as roatating phone screen) make wholePage whole page -- assistance from Anthony
+    $(window).resize(function(){
+        $('#wholePage').height(function(){
+            return $(window).height();
+        });
+    });
+
 
   //if JS available, hide figcaption p
   $("figcaption p").addClass("hidden");
